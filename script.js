@@ -42,7 +42,9 @@ async function checkWeather(city){
 }
 
 searchBtn.addEventListener('click', () => {
-    checkWeather(searchBox.value)
+    let city = searchBox.value.trim()
+    if(city !== '')
+        checkWeather(city)
 })
 
 
